@@ -1,0 +1,165 @@
+*{
+  
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f5f5f5;
+  height: 100%;
+  width: 100%;
+}
+
+/* navbar */
+
+.navbar{
+  height: 5rem;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logo h1{
+  font-size: 1.8rem;
+  color: #333;
+}
+/* .navbar .nav-links{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+} */
+.nav-links h3{
+  font-size: 1rem;
+  color: #333;
+}
+.navbar .nav-links a{
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.navbar .nav-links h3:hover{
+  color: gray;
+}
+
+.post-container{
+  /* width: 80%; */
+ 
+  /* margin: auto; */
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.post-container h2{
+  font-size: 2rem;
+  padding-top: 5rem;
+  margin-bottom: 20px;
+  border-bottom: #333 2px solid;
+  color: #333;
+}
+.post-container form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.post-container form input[type="text"],
+.post-container form input[type="email"],
+.post-container form input[type="password"],
+.post-container form textarea{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+.post-container form textarea{
+  height: 150px;
+  resize: vertical;
+}
+.post-container form button{
+  padding: 10px 15px;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.post-container form button:hover{
+  background-color: gray;
+  color: white;
+}
+.homepage{
+  margin-top: 5rem;
+ margin-bottom: 5rem;
+ padding-left: 3rem;
+ padding-right: 3rem;
+}
+.homepage h1{
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+.text-container{
+  padding-left: 2rem;
+}
+.blog-container{
+  padding:3rem;
+  
+
+}
+.blog-container h1{
+  font-size: 2rem;
+text-align: center;
+  margin-bottom: 3rem;
+ 
+  color: #333;
+}
+.blogs{
+  padding: 1rem;
+}
+/* Responsive Design */
+@media (max-width: 768px){
+ 
+  .post-container{
+    overflow-x: hidden;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+   
+  
+  }
+  .post-container h2{
+    padding-top: 5rem;
+  
+    
+    font-size: 1.5rem;
+  }
+  .post-container form input[type="text"],
+  .post-container form input[type="email"],
+  .post-container form input[type="password"],
+  .post-container form textarea{
+    font-size: 14px;
+   width: 20rem;
+
+    padding: 8px;
+  }
+  .post-container form button{
+    width: 20rem;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .form{
+    width: 100%;
+    height: 100%;
+  }
+}
+
