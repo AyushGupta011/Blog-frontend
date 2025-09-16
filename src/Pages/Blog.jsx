@@ -7,8 +7,7 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
 
   // 🔹 replace with your backend API endpoint
-  const APP_BASE_URL=import.meta.env.VITE_API_URL;
-  const API_URL = "http://localhost:3000/api/posts/"||`${API_BASE_URL}/api/posts/`;
+  const APP_BASE_URL="http://localhost:3000"||import.meta.env.VITE_API_URL;
 
   useEffect(() => {
 
@@ -22,7 +21,7 @@ const Blog = () => {
     const fetchBlogs = async () => {
         setLoading(true);
       try {
-        const res = await fetch(API_URL,{ credentials: "include" });
+        const res = await fetch(`${API_BASE_URL}/api/posts/`,{ credentials: "include" });
         const data = await res.json();
         setBlogs(data);
         setLoading(false);

@@ -13,7 +13,9 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
       const res = await axios.post(`${API_BASE_URL}/api/posts/new`, {
         title,
         content,
-      }, { withCredentials: true }); // in case auth cookies are used
+      }, { withCredentials: true
+        , headers: { "Content-Type": "application/json" }
+       }); // in case auth cookies are used
 
       setMessage("✅ Post created successfully!");
       setTitle("");
