@@ -6,11 +6,11 @@ const CreatePost = () => {
  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [message, setMessage] = useState("");
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/posts/new", {
+      const res = await axios.post(`${API_BASE_URL}/api/posts/new`, {
         title,
         content,
       }, { withCredentials: true }); // in case auth cookies are used

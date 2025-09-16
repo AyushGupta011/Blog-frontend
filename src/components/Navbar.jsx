@@ -15,11 +15,11 @@ useEffect(() => {
     if (storedUser) setUser(JSON.parse(storedUser));
   }, [setUser]);
 
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
     const logout = async () => {
   try {
     await axios.post(
-      "http://localhost:3000/api/auth/logout",
+      `${API_BASE_URL}/api/auth/logout`,
       {},
       { withCredentials: true } // important for sending cookies
     );

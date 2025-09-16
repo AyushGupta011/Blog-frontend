@@ -15,12 +15,12 @@ const RegisterPage = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
   const handleSubmit = async (e) => {
    e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/register", formData);
+      const res = await axios.post(`${API_BASE_URL}/api/auth/register`, formData);
       setMessage("✅ " + res.data.message);
         setUser(res.data.user);
         localStorage.setItem("user", JSON.stringify(res.data.user));

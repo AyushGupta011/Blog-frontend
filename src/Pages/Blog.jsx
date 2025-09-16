@@ -7,7 +7,8 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
 
   // 🔹 replace with your backend API endpoint
-  const API_URL = "http://localhost:3000/api/posts/";
+  const APP_BASE_URL=import.meta.env.VITE_API_URL;
+  const API_URL = "http://localhost:3000/api/posts/"||`${API_BASE_URL}/api/posts/`;
 
   useEffect(() => {
 
