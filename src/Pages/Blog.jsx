@@ -7,7 +7,7 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
 
   // 🔹 replace with your backend API endpoint
-  const APP_BASE_URL="http://localhost:3000"||import.meta.env.VITE_API_URL;
+  const API_BASE_URL="http://localhost:3000"||import.meta.env.VITE_API_URL;
 
   useEffect(() => {
 
@@ -32,7 +32,7 @@ const Blog = () => {
     };
 
     fetchBlogs();
-  }, [user  ]);
+  }, [user]);
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this blog?")) return;
 
